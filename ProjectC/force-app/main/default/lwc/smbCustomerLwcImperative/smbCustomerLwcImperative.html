@@ -1,0 +1,34 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card
+    variant="Narrow"
+    title="Get All SMB Customers"
+    icon-name="standard:account"
+  >
+    <lightning-button
+      variant="success"
+      label="GET SMB CUSTOMER RECORDS"
+      title="Get SMB Customer Records"
+      onclick={getSMBCustomerRecords}
+    ></lightning-button>
+    <br />
+
+    <template if:true={smbAccountsList}>
+      <!--<ul>
+<template for:each={smbAccountsList} for:item="smbacnt">
+<li key={smbacnt.Id}> {smbacnt.name}</li>
+</template>
+</ul>-->
+      <div style="height: 200px">
+        <lightning-datatable
+          key-field="id"
+          data={ListofAccounts}
+          columns={columns}
+        >
+        </lightning-datatable>
+      </div>
+    </template>
+
+    <p slot="footer">Imperative Mechanism to Get records from Database</p>
+  </lightning-card>
+</template>

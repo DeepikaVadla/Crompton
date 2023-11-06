@@ -10,7 +10,7 @@ public class SmbCustomersLwcController {
         List<Account> acntList = [SELECT Id, Name, AccountNumber, Phone, Industry FROM Account];
         return acntList;
     }
-    
+    /*
     @AuraEnabled(cacheable=true)
     public static List<Service_Request_Form__c> relatedSRFs(String acntId){
         List<Service_Request_Form__c> srfList  = [SELECT Id, Name, SMB_Customer_Account__c, SMB_Location__c 
@@ -18,7 +18,7 @@ public class SmbCustomersLwcController {
                                                   WHERE SMB_Customer_Account__c =: acntId];
     return srfList;
     }
-
+*/
     @AuraEnabled(cacheable=true)
     public static List<Account> getAccountRecords(string searchKey){
         string searchItem = '%' +searchKey+ '%';
