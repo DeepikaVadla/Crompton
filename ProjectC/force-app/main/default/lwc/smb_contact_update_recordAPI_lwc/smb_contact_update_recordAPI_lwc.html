@@ -1,0 +1,21 @@
+<template>
+
+<lightning-card  variant="Narrow"  title="Update Contact By LDS UIrecordAPI" icon-name="standard:contact">
+
+    <lightning-input type="text" variant="standard" name="fName" label="First name" 
+    value={firstName} onchange={captureInputs}>
+    </lightning-input>
+
+    <lightning-input type="text" variant="standard" name="lName" label="Last name" 
+    value={lastName} onchange={captureInputs}>
+    </lightning-input>
+
+    <lightning-input type="phone" variant="standard" name="phone" label="Phone" 
+    value={phone} onchange={captureInputs}>
+    </lightning-input>
+
+    <lightning-button variant="success" label="Update" title="Update" onclick={updateContactAction}></lightning-button>
+    
+    <p slot="footer">LDS - Update Record - 26.10.23</p>
+</lightning-card> 
+</template>

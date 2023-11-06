@@ -1,0 +1,22 @@
+<template>
+<lightning-card title="Calculate Highest Number" icon-name="standard:orchestrator">
+<div>
+<p class="slds-p-horizontal_small"><lightning-input type="number" value={firstInputVar} variant="standard" name="First name" label="First Number" onchange={capture}></lightning-input></p>
+<p class="slds-p-horizontal_small"><lightning-input type="number" value={secondInputVar} variant="standard" name="Second name" label="Second Number" onchange={capture}></lightning-input></p>
+<p class="slds-p-horizontal_small"><lightning-input type="number" value={thirdInputVar} variant="standard" name="Third name" label="Third Number" onchange={capture}></lightning-input></p>
+</div>
+
+<div>
+<p class="slds-p-horizontal_small"><lightning-button variant="success" label="Calculate Greater Number" 
+title="titleName" onclick={calculateResults}></lightning-button></p>
+</div>
+
+<b> 
+<p class="slds-p-horizontal_small"><lightning-button variant="Destructive Button" label="Reset" 
+onclick={reset}></lightning-button></p> 
+</b>
+
+<p slot="footer">Crompton Project</p>
+
+</lightning-card>
+</template>

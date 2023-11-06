@@ -1,0 +1,31 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Get All SMB Customers(Accounts) - Imperative Method" icon-name="standard:account">
+        
+        <p>
+            <lightning-button 
+                    variant="Success" 
+                    label="Get SMB Customers" 
+                    title="Get SMB Customers" 
+                    onclick={getSMBCustomersListAction}>
+            </lightning-button>
+        </p>
+        <br/>
+        <template if:true={smbAccountsList}>
+
+            <!--<template for:each={smbAccountsList} for:item="smbAcnt">
+                <li key={smbAcnt.Id}>{smbAcnt.Name}</li>
+            </template>-->
+
+                <div style="height: 300px;">
+                        <lightning-datatable
+                        key-field="id"
+                        data={smbAccountsList}
+                        columns={columns}>
+                        </lightning-datatable>
+                </div>
+
+        </template>
+        <p slot="Crompton India - 18.10.23">Card Footer</p>
+    </lightning-card>
+
+</template>

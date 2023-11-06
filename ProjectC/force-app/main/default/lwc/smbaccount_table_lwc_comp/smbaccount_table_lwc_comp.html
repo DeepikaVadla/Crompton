@@ -1,0 +1,17 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <lightning-card variant="Narrow" title='SMB Customers (Accounts)' icon-name='standard:account'>
+    <lightning-button class='slds-align_absolute-center' variant="success" title='Create Account Record'
+      label="Create New Account Record" onclick={createaccountrecord}></lightning-button>
+    <div class='slds-var-p-around_small'>
+      <div style='height:400px;'>
+        <lightning-datatable key-field="id" data={accounts.data} columns={columnsList}>
+        </lightning-datatable>
+      </div>
+    </div>
+    <p slot='footer'>SMB Customers (Account) Records ListView- 28.10.2023</p>
+  </lightning-card>
+  <template if:true={istocreate}>
+    <c-smbaccount_new_record_lwc_comp onrefreshdata={handlechildeventaction}></c-smbaccount_new_record_lwc_comp>
+  </template>
+</template>

@@ -1,0 +1,46 @@
+<template>
+<div class="slds-box" style="background-color:white">
+<lightning-card variant="Narrow"  title="Calculator" icon-name="standard:knowledge">
+<div class="slds-box" style="background-color:#DEC7FA">
+<div>
+        <p class="slds-p-horizontal_small slds-align_absolute-center">
+        <input class="slds-button slds-button_neutral slds-button_stretch" style="background-color:white" type="text" value={result} ></p>
+        
+        <div class="calculator">
+
+        <p class="slds-p-horizontal_small slds-align_absolute-center">
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="7">7</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="8">8</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="9">9</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={handleButtonClick} value="/">/</button></p>     
+</div>
+        <p class="slds-p-horizontal_small slds-align_absolute-center">    
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="4">4</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="5">5</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="6">6</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={handleButtonClick} value="*">*</button></p>
+<div></div>
+        <p class="slds-p-horizontal_small slds-align_absolute-center">       
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="1">1</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="2">2</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="3">3</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={handleButtonClick} value="-">-</button></p> 
+<div></div>
+        <p class="slds-p-horizontal_small slds-align_absolute-center">
+                
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-color_destructive" style="background-color:#DCFCFB" onclick={handleButtonClick} value="0">0</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={handleButtonClick} value=".">.</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={calculate}>=</button>
+        <button class="slds-button slds-button_neutral slds-button_stretch slds-text-heading_small" style="background-color:#CBE1F1" onclick={handleButtonClick} value="+">+</button></p>
+        <div>
+        <p class="slds-p-horizontal_small slds-align_absolute-center">      
+        <lightning-button variant="destructive" style="background-color:#F0F3EF" class="slds-button slds-button_neutral slds-button_stretch" 
+        label="RESET" title="Reset" onclick={reset}></lightning-button>
+        </p>
+        </div>
+</div>
+</div>
+<p slot="footer">Calculator Created through Visual Studio Code</p>
+</lightning-card>
+</div>
+</template>

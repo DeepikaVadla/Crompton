@@ -1,0 +1,72 @@
+<template>
+<div class="slds-box slds-theme_shade slds-theme_alert-texture">
+    <lightning-card  variant="Narrow"  title="Marks Sheet" icon-name="utility:education">
+        <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <lightning-input type="number" value={teluguVar} label="Telugu" variant="standard" name="Telugu" 
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item>
+       
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={hindiVar} label="Hindi" variant="standard" name="Hindi" 
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item>
+        
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={englishVar} label="English" variant="standard" name="English"
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item> 
+        </lightning-layout>
+        
+        <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <lightning-input type="number" value={mathsVar} label="Maths" variant="standard" name="Maths" 
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item>
+       
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={scienceVar} label="Science" variant="standard" name="Science" 
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item>
+        
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={socialVar} label="Social" variant="standard" name="Social"
+            onchange={marksCalculation}></lightning-input>
+        </lightning-layout-item> 
+        </lightning-layout>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-button variant="success" label="Result" onclick={totalAndPercentage}></lightning-button></lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <lightning-input type="number" value={totalVar} label="Total" variant="standard" onchange={totalAndPercentage}></lightning-input>
+            </lightning-layout-item>
+       
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" value={percentageVar} label="Percent" variant="standard" onchange={totalAndPercentage}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <lightning-input type="text" value={resultVar} label="Pass Result" variant="standard" onchange={totalAndPercentage}></lightning-input> 
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="text" value={gradeVar} label="Grade" variant="standard" onchange={totalAndPercentage}></lightning-input>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-button variant="Destructive" label="Clear" onclick={clear}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <p slot="footer">Marks Sheet(13.10.2023)</p>
+    </lightning-card>
+</div>
+</template>

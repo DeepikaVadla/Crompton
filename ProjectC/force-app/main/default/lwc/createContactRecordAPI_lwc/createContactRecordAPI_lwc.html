@@ -1,0 +1,19 @@
+<template>
+
+    <lightning-card  variant="Narrow"  title="LDS Create Record" icon-name="standard:contact">
+        <!--Create Contact Input Fields -->
+        <lightning-input type="text" variant="standard" name="lastName" label="Last Name" onchange={getInputData}></lightning-input>
+        <lightning-input type="text" variant="standard" name="firstName" label="First Name" onchange={getInputData}></lightning-input>
+        <lightning-input type="date" variant="standard" name="birthDate" label="BirthDate" onchange={getInputData}></lightning-input>
+        <lightning-input type="email" variant="standard" name="email" label="Email" onchange={getInputData}></lightning-input>
+        <lightning-input type="phone" variant="standard" name="phone" label="Phone" onchange={getInputData}></lightning-input>
+        
+
+        <!--Create Button -->
+        <lightning-button variant="brand" label="Save" title="Save" onclick={handleSubmitAction}></lightning-button>
+
+
+        <p slot="footer">LDS CODE LEVEL - lightning-record-form - 25.10.23</p>
+    </lightning-card>
+
+</template>

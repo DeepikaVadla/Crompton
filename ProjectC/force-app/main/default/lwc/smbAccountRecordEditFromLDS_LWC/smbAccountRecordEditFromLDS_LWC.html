@@ -1,0 +1,23 @@
+<template>
+    <lightning-card  variant="Narrow"  title="LDS Record New Form" icon-name="standard:account">
+
+        <!--if we use record-id then it works as edit record, if we remove the record-id then this element works as insert record-->
+
+            <lightning-record-edit-form id="recordViewForm" object-api-name="Account" onsubmit={handleOnSubmitAction}>
+
+                <lightning-messages></lightning-messages>
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Phone"></lightning-input-field>
+                <lightning-input-field field-name="AccountNumber"></lightning-input-field>
+                <lightning-input-field field-name="Active__c"></lightning-input-field>
+                
+
+                <!-- submit -->
+                <lightning-button type="submit" label="SAVE"></lightning-button>
+                <!--reset-->
+                <lightning-button variant="Destructive-Text" label="Reset" title="rest the data" onclick={resetAction}></lightning-button>
+            </lightning-record-edit-form>
+
+        <p slot="footer">LDS Base Element(lightning record edit form) - 25.10.23</p>
+    </lightning-card>
+</template>

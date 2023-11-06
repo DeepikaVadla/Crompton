@@ -1,0 +1,11 @@
+<template>
+  <lightning-card variant="Narrow" title='SMB Contact Input Section' icon-name='standard:contact'>
+    <div class='slds-var-p-around_large'>
+      <lightning-input type='text' name='lastname' label='Last Name' onchange={collectinput}></lightning-input>
+      <lightning-input type='text' name='firstname' label='First Name' onchange={collectinput}></lightning-input>
+      <div class="slds-align_absolute-center slds-var-p-top_medium">
+        <lightning-button variant='success' label='Save' title='Save' onclick={tosavecontactaction}></lightning-button>
+      </div>
+    </div>
+  </lightning-card>
+</template>

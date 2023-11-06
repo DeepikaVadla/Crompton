@@ -1,0 +1,23 @@
+<template>
+  <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+  <lightning-card  variant="Narrow" title="Marks Sheet" icon-name="utility:formula">
+    <div class="slds-box slds-theme_shade slds-theme_alert-texture">  
+     <lightning-input type="number" value={firstNumber} name="input2" label="Number 1" onchange={handleNumberOneChange}></lightning-input>  
+     <lightning-input type="number" value={secondNumber} name="input2" label="Number 2" onchange={handleNumberTwoChange}>
+       </lightning-input>  
+   </div>  
+   <div class="slds-box slds-theme_default">  
+     <b>Output value is : </b>  
+      <p>{resultValue}</p>  
+   </div>  
+    <div class="slds-box slds-theme_default">  
+     <lightning-button label="+" onclick={addition}> </lightning-button>  
+     <lightning-button label="*" onclick={multiplication}> </lightning-button>  
+     <lightning-button label="-" onclick={subtraction}> </lightning-button>  
+     <lightning-button label="/" onclick={division}> </lightning-button>
+     <lightning-button variant="Brand Outline" label="Reset" onclick={reset}></lightning-button>
+    </div>
+    <p slot="footer">Calculator Created through Lightning Studio</p>
+    </lightning-card>
+  </div>
+</template>

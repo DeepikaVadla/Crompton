@@ -1,0 +1,15 @@
+<template>
+
+    <template if:true={isToShow}>
+        We are showing SMB Customers Record Data...!
+        <lightning-card  variant="Narrow"  title="SMB Customers (Account) Record Data" icon-name="standard:account">
+            <p>Account Name:: {acntName} </p>
+            <p>Account Number:: {acntNumber} </p>
+            <p>Account Phone:: {acntPhone} </p>
+            <p>Account Industry:: {acntIndustry} </p>
+
+            <p slot="footer">Crompton India - 17.10.23</p>
+        </lightning-card>
+    </template>
+    
+</template>

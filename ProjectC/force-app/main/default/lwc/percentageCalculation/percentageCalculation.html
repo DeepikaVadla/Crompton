@@ -1,0 +1,30 @@
+<template>
+<lightning-card  variant="Narrow"  title="Percentage Calculator" icon-name="standard:lead">
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <!--<div class="custom-box">Marks Scored</div>-->
+            <lightning-input type="number" value={marksScored} label="Marks Scored" variant="standard" name="Marks Scored" 
+            onchange={fetchInputData}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+           <!--<div class="custom-box">Total Numbers</div>-->
+            <lightning-input type="number" value={totalMarks} label="Total Numbers" variant="standard" name="Total Numbers" 
+            onchange={fetchInputData}></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-input type="number" label="Percentage" variant="standard" value={percentageVar} onchange={calculatePercentage}>
+            </lightning-input>
+        </lightning-layout-item> 
+        </lightning-layout>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <lightning-button variant="success" label="Calculate Percentage" onclick={calculatePercentage}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+        <lightning-button variant="Destructive Button" label="Reset" onclick={reset}></lightning-button>
+        </lightning-layout-item>
+        </lightning-layout>
+               
+    <p slot="footer">Crompton India (13.10.2023)</p>
+</lightning-card>
+</template>

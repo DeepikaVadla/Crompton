@@ -1,0 +1,22 @@
+<template>
+    <lightning-card  variant="Narrow"  title="SMB Customers Search Screen" icon-name="standard:account">
+        <p>
+            <lightning-input type="search" 
+                             variant="standard" 
+                             name="Search Account" 
+                             label="Search Accounts" 
+                             placeholder="type here..."
+                             onchange={searchKeyAction}>
+
+            </lightning-input>
+        </p>
+
+            <template if:true={receivedwiredSmbAccounts.data}>
+                <template for:each={receivedwiredSmbAccounts.data} for:item="smbAcnt">
+                        <p key={smbAcnt.Id}>{smbAcnt.Name}</p>
+                </template>
+            </template>
+
+        <p slot="footer">Crompton India</p>
+    </lightning-card>
+</template>

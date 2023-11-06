@@ -1,0 +1,15 @@
+<template>
+  <lightning-card variant="Narrow" title='Account Input Section' icon-name='standard:account'>
+    <div class="slds-var-p-around_medium">
+      <lightning-input type='text' name='accountName' label='Account Name'></lightning-input>
+      <lightning-input type='number' name='phone' label='Phone'></lightning-input>
+      <lightning-input type='text' name='active' label='Active'></lightning-input>
+      <lightning-input type='text' name='country' label='Country'></lightning-input>
+      <lightning-input type='text' name='state' label='State'></lightning-input>
+      <div class="slds-align_absolute-center slds-var-p-top_large">
+        <lightning-button variant="success" label='Save' title='Save'></lightning-button>
+      </div>
+    </div>
+    <p slot='footer'>Embed Child Component into Parent Component - 28.10.23</p>
+  </lightning-card>
+</template>

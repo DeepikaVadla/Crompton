@@ -1,0 +1,14 @@
+<template>
+
+    This is the parent component...!!!
+    <lightning-card  variant="Narrow"  title="Parent LWC Component" icon-name="standard:account">
+     
+     <lightning-button variant="brand" label="Show Child Component" title="Show Child Component" onclick={ShowChildComponent}></lightning-button>
+    
+    <template if:true={istoShow}>
+    <c-child_lwc_component></c-child_lwc_component>
+    </template>
+
+    <p slot="footer">Capture Child Component data in Parent LWC Conponent - 28.10.23</p>
+    </lightning-card>
+</template>

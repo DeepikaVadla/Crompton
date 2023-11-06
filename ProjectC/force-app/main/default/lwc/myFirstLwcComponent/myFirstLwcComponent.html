@@ -1,0 +1,16 @@
+<template>
+<lightning-card variant="Narrow"  title="Hello Visual Studio Code" icon-name="standard:account">
+<p class="slds-p-horizontal_small">Hello {personName}!</p>
+    <br/>
+    (Data Binding Concept is used here, i.e., when the person name is mentioned in .js file and merging the dynamic data in .html file.<br/>
+    As the Name is changed in the .js file the same name will be displayed on web page (app page/home page)).
+    <br/> 
+    <br/>   
+<p class="slds-p-horizontal_small">{address}</p>
+    <p class="slds-p-horizontal_small"><lightning-input type="text" variant="standard" label=" Name" placeholder="type here..."></lightning-input></p>
+    <p class="slds-p-horizontal_small"><lightning-input type="date" variant="standard" label=" Date" placeholder="type here..."></lightning-input></p>
+    <p class="slds-p-horizontal_small"><lightning-input type="color" variant="standard" label=" Color" placeholder="type here..."></lightning-input></p>
+    <p class="slds-p-horizontal_small"><lightning-input type="file" variant="standard" label=" File"></lightning-input></p>
+    <p slot="footer">First LWC Component created using Visual Studio Code</p>
+</lightning-card>
+</template>

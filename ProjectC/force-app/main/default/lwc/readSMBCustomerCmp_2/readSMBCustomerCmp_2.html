@@ -1,0 +1,14 @@
+<template>
+        <lightning-card  variant="Narrow"  title="SMB Customers (Accounts) - ListofRecords" icon-name="standard:account">
+                <template if:true={ListofAccounts}>
+                    <div style="height: 200px;">
+                        <lightning-datatable
+                        key-field="id"
+                        data={ListofAccounts}
+                        columns={columns}>
+                        </lightning-datatable>
+                    </div>
+                </template>
+            <p slot="footer">Crompton India 17.10.23</p>
+        </lightning-card>
+</template>

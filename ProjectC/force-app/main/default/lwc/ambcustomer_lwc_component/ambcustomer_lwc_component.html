@@ -1,0 +1,22 @@
+<template>
+  <lightning-card variant="Narrow" title="SMB Customer Record" icon-name="standard:account">
+    <div class=" slds-var-p-around_large">
+      <lightning-input type='text' name='name' label='Account Name' onchange={collectionInput}></lightning-input>
+      <lightning-input type='number' name='phone' label='Phone' onchange={collectionInput}></lightning-input>
+      <lightning-input type='text' name='active' label='Active' onchange={collectionInput}></lightning-input>
+      <lightning-input type='text' name='country' label='Country' onchange={collectionInput}></lightning-input>
+      <lightning-input type='text' name='state' label='State' onchange={collectionInput}></lightning-input>
+
+      <div class="slds-align_absolute-center slds-var-p-top_medium">
+        <lightning-button variant="brand" label="Create SMB Customer" title="Create SMB Customer"
+          onclick={createsmbaccount}>
+        </lightning-button>
+      </div>
+
+    </div>
+    <p slot="footer">Create SMB Record after Saving Create Contact Record - 28.10.23</p>
+  </lightning-card>
+  <template if:true={showchildcomponent}>
+    <c-smbcontact_lwc_component acntid={acntrecid}></c-smbcontact_lwc_component>
+  </template>
+</template>
